@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>
+        podcast pro
+    </title>
+    <link rel='stylesheet' href='main.css'>
+</head>
+
+
+
+<body>
+    <div class='row row-nav'>
+        <!-- <img id = 'logo' src="assets/logo.png" alt="PodcastPro logo" style = "left:0"> -->
+        
+        <div style = 'margin-left: 25%; margin-right: 25%;'>
+            <p2 id='schoolname' > University of California, San Diego</p2>
+        <!-- <img id = 'user' src="assets/user.png" alt="user"> -->
+            <button id='button-login'>Login</button>
+        </div>
+    </div>
+    <div class='row row-main'>
+        <table-menu class='col-lg-3'>
+            <table-menu class='table'>
+                <table style="width:80%">
+                    <tr>
+                        <td>
+                            <button type="button" class="collapsible">Week 1<i class="arrow down"></i></button>
+                            <div class="content">
+                                <p>Lorem ipsum dolor sit amet, </p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="button" class="collapsible">Week 2<i class="arrow down"></i></button>
+                            <div class="content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="button" class="collapsible">Week 3<i class="arrow down"></i></button>
+                            <div class="content">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="button" class="collapsible">More<i class="arrow down"></i></button>
+                            <div class="content">
+                                <button type="button" class="collapsible">Week 4<i class="arrow down"></i></button>
+                                <div class="content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <br><br><br><br>
+
+                <table style="width:80%">
+                    <tr>
+                        <th>Summary</th>
+                    </tr>
+                    <tr>
+                        <td>- Keywords 1</td>
+                    </tr>
+                    <tr>
+                        <td>- Keywords 3</td>
+                    </tr>
+                    <tr>
+                        <td>- Keywords 3</td>
+                    </tr>
+                </table>
+            </table-menu>
+
+            <script src='table-menu.css'></script>
+            <script>
+                var coll = document.getElementsByClassName("collapsible");
+                var i;
+
+                for (i = 0; i < coll.length; i++) {
+                    coll[i].addEventListener("click", function () {
+                        this.classList.toggle("active");
+                        var content = this.nextElementSibling;
+                        while (content.nodeName != 'DIV') {
+                            content = content.nextElementSibling;
+                        }
+                        if (content.style.display === "block") {
+                            content.style.display = "none";
+                        } else {
+                            content.style.display = "block";
+                        }
+                    });
+                }
+            </script>
+        </table-menu>
+
+        <main-content class='col-lg-9'>
+
+            <div class='row-1'>
+                <div class='col-lg-8' id='audio-ttile'>
+                    <h3>CSE150A</h3>
+                    <h3>MM/DD/YYYY</h3>
+                </div>
+                <!-- <div class='col-lg-4' id='audio-date'>
+                    <h3>MM/DD/YYYY</h3>
+                </div> -->
+                <div class='col-lg-4'>
+                    <button id='button-subscribe'>Subscribe</button>
+                </div>
+            </div>
+
+
+            <div class='row-2'>
+
+                <div id='audio-bar'>
+                    <audio controls style='width: 90%; outline: none;'>
+                        <source src="assets/sample-audio.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+            </div>
+
+            <div class = 'row-3'>
+                <iframe src="https://podcast.ucsd.edu/">
+                    <p>Your browser does not support iframes.</p>
+                  </iframe>
+            </div>
+        </main-content>
+
+
+    </div>
+
+    <script src='main.js'></script>
+</body>
+
+</html>

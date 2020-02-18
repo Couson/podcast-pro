@@ -1,0 +1,75 @@
+<table-menu class = 'table'>
+    <table style="width:10%">
+    <tr>
+        <td>
+    <button type="button" class="collapsible">Week 1<i class="arrow down"></i></button>
+    <div class="content">
+    <p>Lorem ipsum dolor sit amet, </p>
+    </div>
+</td>
+</tr>
+<tr>
+    <td>
+    <button type="button" class="collapsible">Week 2<i class="arrow down"></i></button>
+    <div class="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
+    </div>
+</td>
+</tr>
+<tr>
+    <td>
+    <button type="button" class="collapsible">Week 3<i class="arrow down"></i></button>
+    <div class="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+</td>
+</tr>
+<tr>
+    <td>
+    <button type="button" class="collapsible">More<i class="arrow down"></i></button>
+    <div class="content">
+        <button type="button" class="collapsible">Week 4<i class="arrow down"></i></button>
+    <div class="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    </div>
+</td>
+</tr>
+</table>
+<br><br><br><br>
+
+    <table style="width:10%">
+        <tr>
+          <th>Summary</th>
+        </tr>
+        <tr>
+          <td>- Keywords 1</td>
+        </tr>
+        <tr>
+          <td>- Keywords 3</td>
+        </tr>
+        <tr>
+          <td>- Keywords 3</td>
+        </tr>
+      </table>
+    </table-menu>
+    <script src = 'table-menu.css'></script>
+      <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            while(content.nodeName != 'DIV'){
+                content = content.nextElementSibling;
+            }
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        </script>
